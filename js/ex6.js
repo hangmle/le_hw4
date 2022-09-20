@@ -15,9 +15,18 @@ function countV(word) {
 }
 
 function pld(word) {
-  ...
+  let revWord = "";
+  for (let i = word.length - 1; i >= 0; i--) {
+    revWord += word[i];
+  }
+  if (revWord.toLowerCase() !== word.toLowerCase()) {
+    return "is not a palindrome";
+  } else {
+    return "is a palindrome";
+  }
 }
 
 const word = prompt('Please enter a word');
 countV(word);
-console.log(`${word} contains ${countV(word)} vowels`);
+pld(word);
+console.log(`${word} contains ${countV(word)} vowels and ${pld(word)}`);
