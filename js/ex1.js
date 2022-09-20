@@ -6,24 +6,23 @@ const num1 = Number(prompt('Enter the first number'));
 const num2 = Number(prompt('Enter the second number'));
 const op = prompt('Enter the mathematical operation (+ - * /)');
 
-let sum = num1+num2;
-let sub = num1-num2;
-let mul = num1*num2;
-let div = num1/num2;
+function result() {
+  if (op === '+') {
+    return num1+num2;
+  }
+  if (op === '-') {
+    return num1-num2;
+  }
+  if (op === '*') {
+    return num1*num2;
+  }
+  if (op === '/') {
+    return num1/num2;
+  }
+}
 
 function mathResult(num1, num2, op) {
-  if (op === '+') {
-    console.log(`${num1} ${op} ${num2} = ${sum}`)
+  console.log(`${num1} ${op} ${num2} = ${result()}`)
   };
-  if (op === '-') {
-    console.log(`${num1} ${op} ${num2} = ${sub}`)
-  };
-  if (op === '*') {
-    console.log(`${num1} ${op} ${num2} = ${mul}`)
-  };
-  if (op === '/') {
-    console.log(`${num1} ${op} ${num2} = ${div}`)
-  };
-};
 
 mathResult(num1, num2, op);
