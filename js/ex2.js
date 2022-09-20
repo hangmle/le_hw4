@@ -14,6 +14,6 @@ if (f === 212) {
 if (f === 32) {
   console.log(`${f} degrees Fahrenheit = ${convertF(f)} degrees Celcius`);
 };
-if (f === 98.7) {
+if ((f !== 212) || (f !== 32)) {
   console.log(`Temperature of ${f} Fahrenheit is equivalent to ${convertF(f)} degrees Celcius`);
 };
