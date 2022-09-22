@@ -15,33 +15,17 @@ for (i = 0; i < values.length; i++) {
 console.log(`Sum of the array values is ${sum}`);
 
 
-// NOT DONE
+let min = values[0];
+let max = values[0];
 
-let min;
-for (m = 0; m < values.length; m++) {
-  values.forEach(m => {
-    if (values[m] > values[m+1]) {
-      values.shift();
-    };
-    if (values[m] < values[m+1]) {
-      values.splice(1,1);
-    }
-  })
-
-  // if (values[m] > values[m+1]) {
-  //   values.slice(1);
-  //   min = values[m+1];
-  // };
-  // if (values[m] < values[m+1]) {
-  //   values.splice(0,1);
-  //   min = values[m];
-  // }
-
-  // if (values[m] > values[m+1]) {
-  //   values = values.slice(2);
-  // };
-  // min = values[0];
-  min = values[0];
-  m++;
+for (i = 1; i < values.length; i++) {
+  if (values[i] < min) {
+    min = values[i];
+  }
+  if (values[i] > max) {
+    max = values[i];
+  }
 }
+
 console.log(`Minimum value of the array is ${min}`);
+console.log(`Maximum value of the array is ${max}`);
